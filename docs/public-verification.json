@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-01",
+  "demo": "https://baliza-gustapaz.starrylinen.chatgpt.site",
+  "application_commit": "99fba06123c6dd145f6d457a41f12f79621f1ed6",
+  "automated_tests": 23,
+  "public_smoke": "passed",
+  "browser_flow": "passed",
+  "responsive_widths": [
+    390,
+    768
+  ],
+  "export": {
+    "filename": "baliza.txt",
+    "bytes": 92,
+    "sha256": "d3ab853ce506e678a117e39a141a7fcce2c0299543f7323be3f372cdfed7c2c7",
+    "structure": "passed"
+  }
+}
