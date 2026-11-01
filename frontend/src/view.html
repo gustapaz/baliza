@@ -1,0 +1,103 @@
+<div class="edition">
+  <div class="puzzle-head">
+    <span>05 × 05 / ORIGINAL</span>
+    <h1>Um desenho.<br />Nenhuma pressa.</h1>
+    <p>
+      Os números contam grupos de casas preenchidas. Entre dois grupos, deixe ao
+      menos uma casa vazia.
+    </p>
+  </div>
+  <div class="puzzle-select" data-bind="foreach:puzzles">
+    <button
+      data-bind="text:name,click:$root.choose,disable:$root.busy"
+    ></button>
+  </div>
+  <div class="puzzle-layout">
+    <section class="board-column">
+      <div class="board-wrap" data-bind="visible:ready">
+        <div class="corner">↓ →</div>
+        <div class="col-clues" data-bind="foreach:columns">
+          <span data-bind="text:text,attr:{'data-state':state}"></span>
+        </div>
+        <div class="row-clues" data-bind="foreach:rows">
+          <span data-bind="text:text,attr:{'data-state':state}"></span>
+        </div>
+        <div
+          class="board"
+          role="group"
+          aria-label="Grade do nonograma 5 por 5"
+          data-bind="foreach:cells"
+        >
+          <button
+            data-bind="css:className,text:text,click:$root.cycle,event:{keydown:$root.key},disable:$root.busy,attr:{'aria-label':label,'aria-pressed':pressed,'data-cell':index}"
+          ></button>
+        </div>
+      </div>
+      <p class="instructions">
+        CLIQUE: PREENCHER → MARCAR VAZIO → LIMPAR<br />SETAS: MOVER ENTRE CASAS
+        · ESPAÇO: MARCAR
+      </p>
+      <div class="actions">
+        <button data-bind="click:check,disable:busy,visible:ready">
+          Conferir desenho ↗</button
+        ><button data-bind="click:hint,enable:hasHint">Aplicar uma pista</button
+        ><button data-bind="click:clear,disable:busy,visible:ready">
+          Limpar grade</button
+        ><button data-bind="click:retry,visible:!ready()">
+          Tentar abrir o jogo
+        </button>
+      </div>
+      <p class="status" role="status" data-bind="text:status"></p>
+      <p class="verdict" data-bind="text:message,css:{solved:solved}"></p>
+    </section>
+    <aside>
+      <span class="section-no">02 / SEU CADERNO</span>
+      <h2>Guarde<br />o raciocínio.</h2>
+      <label
+        >Nome do desenho<input
+          aria-label="Nome do desenho"
+          maxlength="48"
+          data-bind="textInput:title" /></label
+      ><button
+        data-bind="text:saveText,click:save,disable:busy()||!result()"
+      ></button>
+      <div data-bind="if:current">
+        <button data-bind="click:reload,disable:busy">Reler do banco</button
+        ><button data-bind="click:download,disable:busy">Exportar TXT ↓</button
+        ><button
+          data-bind="text:shareText,click:share,visible:owns,disable:busy"
+        ></button
+        ><button data-bind="click:fresh,disable:busy">Novo desenho</button>
+      </div>
+      <a
+        data-bind="visible:link,attr:{href:link}"
+        target="_blank"
+        rel="noreferrer"
+        >Abrir desenho compartilhado ↗</a
+      ><small
+        >Retenção de 7 dias. A chave de edição fica nesta aba. Nenhum cadastro
+        necessário.</small
+      >
+      <details>
+        <summary>Desenhos desta aba</summary>
+        <div data-bind="foreach:archive">
+          <button
+            data-bind="text:title,click:$root.open,disable:$root.busy"
+          ></button>
+        </div>
+      </details>
+      <figure>
+        <img
+          src="/media/subject.webp"
+          width="1200"
+          height="800"
+          loading="lazy"
+          alt="Geometria real de uma fachada urbana"
+        />
+        <figcaption>
+          A geometria está lá fora.<br />O desenho começa aqui.
+        </figcaption>
+      </figure>
+    </aside>
+  </div>
+</div>

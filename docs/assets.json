@@ -1,0 +1,31 @@
+{
+  "assets": [
+    {
+      "file": "public/media/subject.webp",
+      "author": "Stas Knop",
+      "source_url": "https://www.pexels.com/photo/gray-construction-material-3661445/",
+      "download_url": "https://images.pexels.com/photos/3661445/pexels-photo-3661445.jpeg",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "verified_at": "2026-11-01T12:36:16.303568+00:00",
+      "source_sha256": "3494b7432f17c3984c5aafdc2d0362ac2dec0ecb6e79d7fb4e7dea541f7bac3b",
+      "output_sha256": "57dfca69b887c49ff307ba9b74cf8aa8800fb413c15628dcb6278d992b32b6f6",
+      "source_dimensions": [
+        5425,
+        3269
+      ],
+      "width": 1200,
+      "height": 723,
+      "bytes": 199692,
+      "transformations": [
+        "EXIF orientation applied",
+        "RGB conversion",
+        "long edge resized to maximum 1200px",
+        "EXIF removed",
+        "WebP quality 65, method 6"
+      ],
+      "visual_review": "Inspeção visual da versão final: sem faces identificáveis, marcas visíveis ou dados pessoais legíveis. Recortes usados em Doca, Rubato e Fagulha para excluir marcas de equipamentos.",
+      "usage": "Imagem de ambientação em demonstração de portfólio; não é produto para revenda e não implica endosso."
+    }
+  ]
+}
